@@ -1,6 +1,5 @@
 const express = require("express");
 const axios = require("axios");
-const xml = require("xml");
 const cors = require("cors");
 
 const app = express();
@@ -15,8 +14,9 @@ app.get("/", async (req, res) => {
       params,
     }
   );
-
-  res.send(xml(response.data));
+  console.log(response);
+  res.header("Content-Type", "text/xml");
+  res.send(response.data);
 });
 
 app.listen(process.env.PORT || 3000, () => {
