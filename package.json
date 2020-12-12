@@ -5,6 +5,7 @@
   "author": "paulo santana",
   "license": "MIT",
   "scripts": {
+    "start": "node index.js",
     "dev": "node index.js"
   },
   "dependencies": {
